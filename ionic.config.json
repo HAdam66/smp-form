@@ -1,0 +1,8 @@
+{
+  "name": "smp-urlap",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "f6864878"
+}

@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "smp-urlap",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

@@ -1,0 +1,23 @@
+.formPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 16px;
+    width: 60%;
+    height: 100%;
+}
+
+.formCardHeader {
+    text-align: center;
+    padding: 0;
+}
+
+.formCardHeader > h1 {
+    margin: 0;
+}
