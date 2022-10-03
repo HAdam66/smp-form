@@ -14,7 +14,11 @@ const Home: React.FC = () => {
   const [reference, setReference] = useState<string>();
   return (
     <IonPage className={HomeFormStyle.formPage}>
-      <BankTransaction owner={owner} setOwner={setOwner}/>
+      <IonHeader>
+            <IonToolbar>
+                <IonTitle>Bank transaction</IonTitle>
+            </IonToolbar>
+        </IonHeader>
       <IonContent scrollEvents={true}
         onIonScrollStart={() => { }}
         onIonScroll={() => { }}
