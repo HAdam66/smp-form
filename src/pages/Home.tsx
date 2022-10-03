@@ -26,7 +26,7 @@ const Home: React.FC = () => {
           <IonCardContent>
             <IonItem>
               <IonLabel position="stacked">From:</IonLabel>
-              <IonInput value={owner} type='text' minlength={4} placeholder='Sender' onIonChange={e => setOwner(e.detail.value!)} />
+              <IonInput value={owner} type='text' placeholder='Sender' onIonChange={e => setOwner(e.detail.value!)} />
             </IonItem>
             <IonItem>
               <IonLabel position="stacked">Owner IBAN:</IonLabel>
@@ -34,7 +34,7 @@ const Home: React.FC = () => {
             </IonItem>
             <IonItem>
               <IonLabel position="stacked">Recipient:</IonLabel>
-              <IonInput value={recipient} type="text" min={4} placeholder='Payee' onIonChange={e => setRecipient(e.detail.value!)} />
+              <IonInput value={recipient} type="text" placeholder='Payee' onIonChange={e => setRecipient(e.detail.value!)} />
             </IonItem>
             <IonItem>
               <IonLabel position="stacked">Recipient IBAN:</IonLabel>
