@@ -1,6 +1,5 @@
 import { IonItem, IonLabel, IonInput, IonHeader, IonPage, IonTitle, IonToolbar, IonCardContent, IonCardHeader, IonButton, IonCard, useIonToast, IonCheckbox, IonRadio, IonContent, IonList, IonRadioGroup, IonListHeader } from '@ionic/react';
 import { useState } from 'react';
-import BankTransaction from '../components/BankTransaction';
 import HomeFormStyle from './Home.module.css';
 
 const Home: React.FC = () => {
@@ -15,19 +14,16 @@ const Home: React.FC = () => {
   return (
     <IonPage className={HomeFormStyle.formPage}>
       <IonHeader>
-            <IonToolbar>
-                <IonTitle>Bank transaction</IonTitle>
-            </IonToolbar>
-        </IonHeader>
-      <IonContent scrollEvents={true}
-        onIonScrollStart={() => { }}
-        onIonScroll={() => { }}
-        onIonScrollEnd={() => { }}>
+        <IonToolbar>
+          <IonTitle>Bank transaction</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent>
         <IonCard className={HomeFormStyle.formCard}>
           <IonCardHeader className={HomeFormStyle.formCardHeader}>
             <h1>New transaction</h1>
           </IonCardHeader>
-          <IonCardContent >
+          <IonCardContent>
             <IonItem>
               <IonLabel position="stacked">From:</IonLabel>
               <IonInput value={owner} type='text' minlength={4} placeholder='Sender' onIonChange={e => setOwner(e.detail.value!)} />
@@ -52,16 +48,16 @@ const Home: React.FC = () => {
               <IonRadioGroup value={execution} onIonChange={e => setExecution(e.detail.value)}>
                 <IonItem className={HomeFormStyle.formRadio}>
                   <IonItem>
-                    <IonLabel>Standard</IonLabel>
                     <IonRadio value="standard" />
+                    <IonLabel>Standard</IonLabel>
                   </IonItem>
                   <IonItem>
-                    <IonLabel>Urgent</IonLabel>
                     <IonRadio value="urgent" />
+                    <IonLabel>Urgent</IonLabel>
                   </IonItem>
                   <IonItem>
-                    <IonLabel>Instant Payment</IonLabel>
                     <IonRadio value="instant payment" />
+                    <IonLabel>Instant Payment</IonLabel>
                   </IonItem>
                 </IonItem>
               </IonRadioGroup>
@@ -77,9 +73,9 @@ const Home: React.FC = () => {
           </IonCardContent>
         </IonCard>
       </IonContent>
-        <IonButton onClick={() => {
-          presentToast({
-            message: `{
+      <IonButton onClick={() => {
+        presentToast({
+          message: `{
             "owner":${owner}
             "ownerIban":${ownerIban}
             "recipient":${recipient}
@@ -88,23 +84,23 @@ const Home: React.FC = () => {
             "execution":${execution}
             "reference":${reference}
           }`,
-            duration: 8000,
-            cssClass: 'custom-toast',
-            buttons: [
-              {
-                text: 'Dismiss',
-                role: 'cancel'
-              }
-            ],
-          });
-          setRecipient("");
-          setRecipientIban("");
-          setExecution("")
-          setReference("")
-          setAmount("")
-        }}>
-          Send
-        </IonButton>
+          duration: 8000,
+          cssClass: 'custom-toast',
+          buttons: [
+            {
+              text: 'Dismiss',
+              role: 'cancel'
+            }
+          ],
+        });
+        setRecipient("");
+        setRecipientIban("");
+        setExecution("")
+        setReference("")
+        setAmount("")
+      }}>
+        Send
+      </IonButton>
     </IonPage>
   );
 };
