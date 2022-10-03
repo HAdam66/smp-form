@@ -21,3 +21,7 @@
 .formCardHeader > h1 {
     margin: 0;
 }
+
+.formRadio {
+    border-style: none;
+}
